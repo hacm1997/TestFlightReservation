@@ -1,0 +1,24 @@
+<div>
+    <h2>Reservar Vuelo</h2>
+    <form (submit)="makeReservation()">
+      <div style="display: flex; gap: 20;">
+        <div style="padding-right: 20px;">
+          <label for="passengerDni">Número de indentificación:</label>
+          <input type="number" id="passengerDni" [(ngModel)]="passengerDni" name="passengerDni" required>
+        </div>
+        <div style="padding-right: 20px;">
+          <label for="passengerName">Nombre del Pasajero:</label>
+          <input type="text" id="passengerName" [(ngModel)]="passengerName" name="passengerName" required>
+        </div>
+        <div>
+          <label for="seatNumber">Número de Asientos:</label>
+          <input type="number" id="seatNumber" [(ngModel)]="seatNumber" name="seatNumber" required>
+        </div>
+      </div>
+      <br/>
+      <div>
+        <button mat-flat-button color="primary" type="submit">Realizar Reserva</button>
+      </div>
+    </form>
+</div>
+  

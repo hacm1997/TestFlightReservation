@@ -1,0 +1,10 @@
+<div>
+    <h2>Vuelos Disponibles</h2>
+    <ul>
+      <li *ngFor="let flight of flights">
+        {{ flight.name }} - {{ flight.departure }} to {{ flight.destination }}
+        <a [routerLink]="['/reservation', flight.id]">Reservar</a>
+      </li>
+    </ul>
+</div>
+  

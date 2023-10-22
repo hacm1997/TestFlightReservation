@@ -1,0 +1,14 @@
+.contentPrincipal{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.mainMenu{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+section {
+    display: table;
+  }

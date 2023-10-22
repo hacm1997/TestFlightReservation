@@ -1,0 +1,13 @@
+.find-flights{
+    display: flex;
+    justify-content: center;
+}
+.content h1{
+    font-size: 28px;
+}
+.content form{
+    width: 80%;
+}
+.content form div{
+    margin-top: 20px;
+}

@@ -1,0 +1,9 @@
+.information{
+    text-align: center;
+}
+.information table thead th{
+    width: 200px;
+}
+.dataInfo{
+    width: 300px;
+}

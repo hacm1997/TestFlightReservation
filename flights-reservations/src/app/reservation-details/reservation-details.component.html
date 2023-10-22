@@ -1,0 +1,34 @@
+<div>
+    <h2>Buscar Reserva</h2>
+    <form (ngSubmit)="buscarReserva()" #form="ngForm">
+        <mat-form-field>
+            <mat-label>Número de identificación:</mat-label>
+            <input class="inputs" matInput type="text" id="userDni" name="userDni" [(ngModel)]="userDni" required>
+          </mat-form-field>
+          <div class="mat-button">
+            <button mat-raised-button type="submit">Buscar</button>
+          </div>
+    </form>
+</div>
+<hr/>
+<div class="information">
+    <table>
+        <thead>
+            <th>#</th>
+            <th>Nombre del pasajero</th>
+            <th>Número de identificación</th>
+            <th>Número de asieontos</th>
+            <th>Fecha de creación</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservations of reservation; let i = index" class="dataInfo">
+                <td>{{i+1}}</td>
+                <td>{{ reservations.passengerName }}</td>
+                <td>{{ reservations.passengerDni }}</td>
+                <td>{{ reservations.seatNumber }}</td>
+                <td>{{ reservations.createdAt }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
