@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const sequelize = require('./config/database');
 const loadTestData = require('./data/loadTestData');
 const flightsRouter = require('./routes/flights');
+require('dotenv').config()
 // const reservationsRouter = require('./routes/reservations');
 const cors = require('cors');
 
@@ -10,11 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({ origin: process.env.URL_ORIGIN }));
 app.use('/api', flightsRouter);
 // app.use('/reservations', reservationsRouter);
-
-
 
 sequelize.query('SELECT COUNT(*) AS count FROM public."Flights"').then(([results, metadata]) => {
   const rowCount = results[0].count;
