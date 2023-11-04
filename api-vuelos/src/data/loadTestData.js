@@ -114,8 +114,6 @@ async function loadTestData() {
     console.log('Datos de prueba cargados exitosamente.');
   } catch (error) {
     console.error('Error al cargar datos de prueba:', error);
-  } finally {
-    sequelize.close();
   }
 }
 module.exports = loadTestData;
